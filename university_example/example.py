@@ -68,8 +68,8 @@ frank.teach_course("Etiquette for History")
 print("\n--- Research & Teaching Outputs ---")
 for staff in staff_members:
     # Are they an academic who can write papers, and who has written any?
-    if isinstance(staff, Academic) and staff.papers:
-        print(f"{staff} wrote {[paper.title for paper in staff.papers]}")
+    if isinstance(staff, Academic) and staff.publications:
+        print(f"{staff} wrote {[paper.title for paper in staff.publications]}")
 
     # Do they have the ability to instruct? (via inheritance)
     if isinstance(staff, InstructorMixin) and staff.courses:

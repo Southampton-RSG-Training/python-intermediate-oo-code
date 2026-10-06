@@ -5,7 +5,7 @@ and the paper class that they all use.
 from university import Person
 
 
-class Paper:
+class Publication:
     """
     Papers written by Academics
     """
@@ -21,33 +21,33 @@ class Academic(Person):
     def __init__(self, name, office):
         """
         We use the 'superclass' (parent class) initialiser via `super()`,
-        and then say we have a list of papers too.
+        and then say we have a list of publications too.
         """
         super().__init__(name, office)
-        self.papers = []
+        self.publications = []
 
     def write_paper(self, title, text):
         """
-        We create a new paper, and add it to our list of papers.
+        We create a new paper, and add it to our list of publications.
         We also return it, so any collaborators can record it too.
         """
-        paper = Paper(title, text)
-        self.papers.append(paper)
+        paper = Publication(title, text)
+        self.publications.append(paper)
         return paper
 
     def coauthor_paper(self, paper):
         """
-        We add the paper we're given to our list of papers.
+        We add the paper we're given to our list of publications.
         """
-        self.papers.append(paper)
+        self.publications.append(paper)
 
 
 # ======== CALLOUT ========
-# Why do we declare `papers = []` in the init, not on the class itself, e.g.
+# Why do we declare `publications = []` in the init, not on the class itself, e.g.
 #
 #   class Academic(Person):
-#       papers = []
+#       publications = []
 #
 # Because then it'd belong to the *class itself*.
-# All instances of the Academic class would share the same list of papers.
+# All instances of the Academic class would share the same list of publications.
 # =========================

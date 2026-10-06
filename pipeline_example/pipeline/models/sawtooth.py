@@ -10,10 +10,9 @@ class ModelSawtooth(ModelBase):
     """
     We know our data is a cosine wave, so we'll make a very bad model of it as a triangle wave.
     """
-
     def __init__(self, width: float = 0.5):
         """
-        Initialises the model. This takes a parameter, which we save to it.
+        Initialises the sawtooth wave model. This takes a parameter, which we save to it.
 
         :param width: Part of the scipy sawtooth, what fraction of 1 period is up vs down.
         """

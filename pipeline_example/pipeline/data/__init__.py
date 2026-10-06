@@ -30,3 +30,10 @@ class DataBase(ABC):
         :param **kwargs: Any other keyword arguments added in subclasses.
         """
         raise NotImplementedError
+
+# ----------------------------------------
+# CALLOUT: Why split initialiser and load?
+# ----------------------------------------
+# In this example, we could just load the data from file in the initialiser.
+# A lot of designs would probably do that, if they don't have large/dynamic/parallelised data stuff going on.
+# But it wouldn't be as easy to represent on the slides so it's a separate method here.

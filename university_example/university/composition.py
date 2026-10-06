@@ -1,5 +1,5 @@
 """
-This file shows how to
+This file shows how to add functionality to a class by plugging extra classes into it.
 """
 from university import Admin
 from university.aggregation import Academic
